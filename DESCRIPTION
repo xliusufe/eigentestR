@@ -1,0 +1,16 @@
+Package: eigentest
+Type: Package
+Title: eigentest
+Version: 0.1.0
+Authors@R: c(person(given = "Xu", family = "Liu", role = c("aut","cre"), email = "liu.xu@sufe.edu.cn")
+			)
+Author: Xu Liu [aut,cre]
+Maintainer: Xu Liu <liu.xu@sufe.edu.cn>
+Description: R package including the C++ library "EIGEN".
+License: GPL (>= 2)
+RoxygenNote: 6.0.1
+NeedsCompilation: yes
+Repository: github
+URL: https://github.com/xliusufe/eigentest
+Encoding: UTF-8
+Packaged: 2020-05-20 01:35:21 UTC; admin

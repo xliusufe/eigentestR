@@ -1,0 +1,3 @@
+useDynLib(eigentest, .registration=TRUE)
+exportPattern("^[[:alpha:]]+")
+export(generateMatrix)
