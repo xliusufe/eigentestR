@@ -1,6 +1,6 @@
 # eigentest
 
-A demo of R-package including the C++ library "EIGEN" without assistence of "Rcpp".
+A demo of R-package including the `C++` library `EIGEN` without assistence of `Rcpp`.
 
 # Installation
 
