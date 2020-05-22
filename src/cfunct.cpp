@@ -21,16 +21,17 @@ Eigen::MatrixXd _MatrixPlus_(Eigen::MatrixXd Data, int d)
 
 
 SEXP ExportsMatrixPlus(SEXP d0){
-	int *d_ = INTEGER(d0);
+	int i,j,*d_ = INTEGER(d0);
 	Eigen::MatrixXd M_, M1_;	
 	int d = d_[0];	
 	double *M;
 	SEXP rM, list, list_names;
-	M1_ = Eigen::MatrixXd::Identity(d, d);	
+	M1_ = Eigen::MatrixXd::Identity(d, d);		
 	M_ = _MatrixPlus_(M1_,d);
 	// Outcome
 	PROTECT(rM = allocVector(REALSXP, d*d));
 	M = REAL(rM);
+	for(i=0;i<d;i++) for(j=0;j<d;j++)	M[i*d+j] = M_(i,j);
 	
 	char *names[2] = {"M","d"};
 	PROTECT(list_names = allocVector(STRSXP, 1));
